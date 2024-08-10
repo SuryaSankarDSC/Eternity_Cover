@@ -1,0 +1,50 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for the background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 8px 16px; /* Reduced padding for a smaller navbar */
+}
+
+.nav-link {
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 0.875rem; /* Smaller font size for links */
+}
+
+.nav-link:hover {
+  color: #16a34a; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.call-button {
+  background-color: #22c55e; /* Tailwind's green-500 */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.call-button:hover {
+  background-color: #16a34a; /* Tailwind's green-600 */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.logout-button {
+  background-color: #ef4444; /* Tailwind's red-500 */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #dc2626; /* Tailwind's red-600 */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Additional styles for logo and title */
+.logo {
+  width: 40px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.title {
+  font-size: 1.25rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-left: 8px; /* Space between logo and title */
+}

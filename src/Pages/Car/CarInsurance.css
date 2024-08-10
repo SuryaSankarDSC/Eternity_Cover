@@ -1,0 +1,125 @@
+.ci-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .ci-frame {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ci-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ci-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .ci-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .ci-policy-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .ci-policy-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ci-policy-desc {
+    margin-bottom: 1rem;
+  }
+  
+  .ci-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+  }
+  
+  .ci-btn-learn {
+    background-color: #4299e1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ci-btn-learn:hover {
+    background-color: #3182ce;
+  }
+  
+  .ci-btn-buy {
+    background-color: #48bb78;
+  }
+  
+  .ci-btn-buy:hover {
+    background-color: #38a169;
+  }
+  
+  .ci-claim-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .ci-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .ci-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ci-form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ci-form-input,
+  .ci-form-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .ci-form-input:focus,
+  .ci-form-textarea:focus {
+    border-color: #4299e1;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+  }
+  
+  .ci-btn-submit {
+    background-color: #4299e1;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .ci-btn-submit:hover {
+    background-color: #3182ce;
+  }
+  

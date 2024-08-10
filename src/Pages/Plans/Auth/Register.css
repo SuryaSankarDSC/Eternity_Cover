@@ -1,0 +1,78 @@
+
+/* Register Container */
+.register-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #BCE3C5, #0097A7); /* Soft Sage and Deep Teal gradient */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Register Box */
+.register-box {
+  background-color: #FFF0F0; /* Cream background */
+  color: #0097A7; /* Deep Teal text */
+  padding: 40px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+/* Register Title */
+.register-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0097A7; /* Deep Teal border */
+  border-radius: 5px;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+/* Button Base Styles */
+.register-button, .toggle-button {
+  background-color: #04e3d8; /* Deep Teal background */
+  color: #FFF0F0; /* Cream text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Button Hover Effects */
+.register-button:hover, .toggle-button:hover {
+  transform: scale(1.05);
+  background-color: #007c8a; /* Darker Deep Teal on hover */
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

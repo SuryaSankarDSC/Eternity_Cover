@@ -1,0 +1,166 @@
+/* Login Container */
+.login-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Login Box */
+.login-box {
+  background-color: rgba(240, 255, 240, 0.9); /* Light green background with transparency */
+  color: #003366; /* Dark blue text */
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 0.5s ease-in-out;
+  position: relative; /* For pseudo-element positioning */
+  z-index: 1; /* Ensure it is above the video */
+}
+
+/* Login Title */
+.login-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 20px; /* Increase margin for spacing */
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: calc(100% - 22px); /* Adjust for padding and border */
+  padding: 10px;
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Error Message */
+.error-message {
+  color: #ff3333;
+  margin-bottom: 20px; /* Align with input-group margin */
+}
+
+/* Button Base Styles */
+button {
+  background-color: #003366; /* Dark blue background */
+  color: #F0FFF0; /* Light green text */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Swipe Animation */
+@keyframes swipeRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-45deg);
+  transition: transform 0.3s;
+}
+
+/* Button Hover Effects */
+button:hover::before {
+  transform: skewX(-45deg) translateX(100%);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Login Button */
+.login-button {
+  background-color: #ff6600; /* Orange background */
+}
+
+.login-button:hover {
+  background-color: #cc5200; /* Darker orange on hover */
+}
+
+/* Toggle Button */
+.toggle-button {
+  background-color: #F5F5F5; /* Light gray background */
+  color: #003366; /* Dark blue text */
+  font-weight: bold;
+}
+
+.toggle-button:hover {
+  background-color: #D5E8D4; /* Light green on hover */
+  color: #00224c; /* Darker dark blue text on hover */
+}
+
+/* Admin Login Toggle */
+.admin-login-toggle {
+  background-color: #F0FFF0; /* Light green background */
+  color: #003366; /* Dark blue text */
+  border: 1px solid #003366; /* Dark blue border */
+}
+
+.admin-login-toggle:hover {
+  background-color: #F5F5F5; /* Light gray on hover */
+  color: #00224c; /* Darker dark blue text on hover */
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

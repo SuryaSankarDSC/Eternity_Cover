@@ -1,0 +1,102 @@
+.chtBody {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chtContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto; /* Ensure the container is centered */
+}
+
+.chtBox {
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.chtMessage {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.chtMessageUser {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.chtMessageBot {
+  background-color: #e9ecef;
+  color: #333;
+  align-self: flex-start;
+}
+
+.chtForm {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.chtInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chtSendButton {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chtSendButton:hover {
+  background-color: #283a4d;
+}
+
+.chtExportButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chtExportButton:hover {
+  background-color: #218838;
+}

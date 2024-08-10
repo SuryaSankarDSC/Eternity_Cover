@@ -1,0 +1,35 @@
+/* styles.css */
+
+footer {
+    background: linear-gradient(to right, #3056d3, #13c296);
+    color: white;
+  }
+  
+  .text-body-color {
+    color: #ffffff;
+  }
+  
+  .text-dark {
+    color: #ffffff;
+  }
+  
+  .text-primary {
+    color: #f3f3f3;
+  }
+  
+  .hover\:text-primary:hover {
+    color: #f3f3f3;
+  }
+  
+  .border-primary {
+    border-color: #f3f3f3;
+  }
+  
+  .hover\:border-primary:hover {
+    border-color: #f3f3f3;
+  }
+  
+  .hover\:bg-primary:hover {
+    background-color: #f3f3f3;
+  }
+  
