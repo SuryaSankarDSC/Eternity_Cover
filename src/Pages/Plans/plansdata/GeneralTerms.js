@@ -21,26 +21,26 @@ const GeneralTerms = () => {
           first approach the Complaints/Grievance Redressal Cell of the insurer
           by visiting{" "}
           <a
-            href="https://www.Caresurehealth.in/grievance-redressal"
+            href="https://www.EternityCover.in/grievance-redressal"
             className="text-blue-500 underline"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://www.Caresurehealth.in/grievance-redressal
+            https://www.EternityCover.in/grievance-redressal
           </a>
           .
         </p>
         <p className="mt-2">
           Email:{" "}
           <a
-            href="mailto:gro@Caresurehealth.in"
+            href="mailto:gro@EternityCover.in"
             className="text-blue-500 underline"
           >
-            gro@Caresurehealth.in
+            gro@EternityCover.in
           </a>{" "}
           or{" "}
           <a
-            href="mailto:grievances@Caresurehealth.in"
+            href="mailto:grievances@EternityCover.in"
             className="text-blue-500 underline"
           >
             grievances@Caresurehealth.in

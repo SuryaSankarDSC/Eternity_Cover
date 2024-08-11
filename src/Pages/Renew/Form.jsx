@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Form = () => {
   const [policyNumber, setPolicyNumber] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const images = [
     "https://img.freepik.com/free-photo/front-view-beautiful-blonde-woman_23-2148471029.jpg?w=360&t=st=1690552524~exp=1690553124~hmac=3a6bbb56c03a814dcd239b191cfb2f97aa245dce5837f70b2df249477d84990f",
     "https://img.freepik.com/free-photo/family-home_23-2148166876.jpg?w=360&t=st=1690552628~exp=1690553228~hmac=d8c8cf77695483972a612a82262ef51d6ddc09017689ebf82869c6995d83c277",
@@ -23,11 +25,22 @@ const Form = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Log the form data as an array to the console
-    console.log("formData: ", [policyNumber, selectedDate, mobileNumber]);
+    const renewalData = {
+      policyNumber,
+      renewalDate: selectedDate,
+      mobileNumber
+    };
+
+    try {
+      console.log("Submitting data:", renewalData); // Debugging: Check data being submitted
+      const response = await axios.post("http://localhost:8080/api/renewals", renewalData);
+      console.log("Renewal submitted successfully", response.data);
+    } catch (error) {
+      console.error("Error submitting renewal:", error.response ? error.response.data : error.message);
+    }
 
     // Clearing the input fields after submission
     setPolicyNumber("");
@@ -40,7 +53,7 @@ const Form = () => {
       <div className="container mx-auto">
         <div className="flex justify-center my-12 shadow-2xl">
           <div className="w-full xl:w-3/4 lg:w-11/12 flex bg-white">
-            <div className="w-full h-[700px] bg-white hidden lg:block lg:w-5/12 bg-cover rounded-l-lg">
+            <div className="w-full h-[700px] hidden lg:block lg:w-5/12 bg-cover rounded-l-lg">
               {images.map((image, index) => (
                 <img
                   key={index}
@@ -55,7 +68,7 @@ const Form = () => {
             </div>
             <div className="w-full lg:w-7/12 bg-white p-5 mt-20 rounded-lg h-[620px] lg:rounded-l-none">
               <h3 className="pt-4 text-3xl font-semibold text-center">
-                Insurance
+                Insurance Renewal
               </h3>
               <form
                 className="px-8 pt-6 pb-8 mb-4 bg-white rounded"
@@ -83,13 +96,13 @@ const Form = () => {
                 <div className="mb-4">
                   <label
                     className="block mb-2 text-sm font-bold text-gray-700"
-                    htmlFor="dob"
+                    htmlFor="renewalDate"
                   >
-                    Date of Birth
+                    Renewal Date
                   </label>
                   <input
                     className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                    id="dob"
+                    id="renewalDate"
                     type="date"
                     value={selectedDate}
                     onChange={(e) => setSelectedDate(e.target.value)}

@@ -16,6 +16,7 @@ import AdminPage from "./Pages/Plans/Auth/AdminPage"; // Import your admin page 
 import CalculationPage from "./Pages/Calculation/CalculationPage";
 import ChatBot from "./Pages/Home/ChatBot";
 import Payment from "./Pages/Payment";
+import Policies from "./Policies/Policies";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="*" element={<Error />} />
           <Route path="/chatbot" element={<ChatBot/>} />
           <Route path="/payment" element={<Payment/>} />
+          <Route path="/policies" element={<Policies/>}/>
         </Routes>
       </AuthProvider>
     </div>
