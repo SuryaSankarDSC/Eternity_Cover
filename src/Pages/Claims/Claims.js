@@ -6,6 +6,9 @@ const Claims = () => {
   return (
     <div> 
       <Navbar/>
+      <br/>
+      <br/>
+      <br/>
      <ClaimTabs />
      <Footer/>
     </div>
