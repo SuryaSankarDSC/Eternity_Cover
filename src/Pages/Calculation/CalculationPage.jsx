@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './CalculationPage.css';
+import Navbar from '../Navbar/Navbar'
 
 const CalculationPage = () => {
   const [calculationData, setCalculationData] = useState({
