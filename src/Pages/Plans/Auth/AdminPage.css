@@ -1,120 +1,96 @@
-/* Admin Page Container */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
 .admin-page-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Admin Header */
 .admin-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px; /* Padding for header */
-  background-color: #003d79; /* Dark blue for contrast */
-  color: #ffffff;
-  font-size: 1.4em; /* Font size for header */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: #ff6600;
+  color: #fff;
 }
 
-/* Logout Button */
 .logout-button {
-  background-color: #ff5733; /* Vibrant orange color */
+  background-color: #ff6600;
   border: none;
-  width: 100px; /* Fixed width for square button */
-  height: 30px; /* Fixed height for square button */
-  color: #ffffff;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0.5rem;
   cursor: pointer;
-  border-radius: 5px; /* Slightly rounded corners */
-  font-size: 0.8em; /* Smaller font size */
-  font-family: 'Arial', sans-serif; /* Different font for button */
-  font-weight: bold; /* Bold font weight */
-  font-style: italic; /* Italic font style */
-  text-transform: uppercase; /* Uppercase text */
-  transition: background-color 0.3s, transform 0.3s;
-  display: flex; /* Center text vertically and horizontally */
-  align-items: center;
-  justify-content: center;
 }
 
-.logout-button:hover {
-  background-color: #c70039; /* Darker orange on hover */
-  transform: scale(1.05);
-}
-
-/* Admin Content */
 .admin-content {
   display: flex;
   flex: 1;
-  overflow: hidden;
 }
 
-/* Sidebar */
 .sidebar {
-  width: 200px; /* Further narrowed sidebar */
-  background-color: #f0f0f0; /* Light background color */
-  border-right: 1px solid #ccc; /* Light border color */
-  padding: 10px; /* Reduced padding */
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  background-color: #333;
+  color: #fff;
 }
 
-/* Sidebar Links */
 .sidebar ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 .sidebar li {
-  padding: 6px;
+  padding: 1rem;
   cursor: pointer;
-  font-size: 0.8em; /* Smaller font size */
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 3px; /* Smaller border radius */
 }
 
+.sidebar li.active,
 .sidebar li:hover {
-  background-color: #d9d9d9; /* Light grey on hover */
+  background-color: #ff6600;
 }
 
-.sidebar li.active {
-  background-color: #003d79; /* Dark blue for active link */
-  color: #ffffff;
-}
-
-/* Main Content */
 .main-content {
   flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-  font-size: 0.9em; /* Font size for content */
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  gap: 20px; /* Space between sections */
+  padding: 1rem;
+  background-color: #fff;
 }
 
-/* Admin Section */
 .admin-section {
-  background-color: #ffffff;
-  border-radius: 6px; /* Slightly smaller border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px; /* Reduced padding */
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.admin-section h2 {
-  margin-bottom: 10px; /* Smaller margin for header */
+.update-form {
+  margin-top: 1rem;
 }
 
-.admin-section ul {
-  list-style-type: none;
-  padding: 0;
+.update-form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.admin-section li {
-  padding: 6px; /* Smaller padding */
-  border-bottom: 1px solid #eee; /* Light border color */
+.update-form button {
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
-.admin-section li:last-child {
-  border-bottom: none;
+.update-form button:hover {
+  background-color: #e65c00;
 }

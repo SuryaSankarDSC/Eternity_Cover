@@ -50,6 +50,9 @@ const CalculationPage = () => {
 
   return (
     <div className="calculation-page-container">
+      <Navbar/>
+      <br></br>
+      <br/>
       <h1>Insurance Calculator</h1>
       <form onSubmit={handleCalculate}>
         <label>
